@@ -168,7 +168,7 @@ public class ExhibitorMain implements Closeable
         // to limit the length of the queue. Requests arriving when
         // the queue is full will be refused.
         // See https://dcosjira.atlassian.net/browse/DCOS-558
-        final int maxQueueSize = 64;
+        final int maxQueueSize = 4096;
         LinkedBlockingQueue<Runnable> queue = new LinkedBlockingQueue<Runnable>(maxQueueSize);
         final int minThreads = 10;
         final int maxThreads = 100;
